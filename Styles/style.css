@@ -1,0 +1,298 @@
+@font-face {
+  font-family: Dm-sans;
+  src: url(/fonts/dm-sans-v17-latin-regular.woff2);
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: inter;
+  src: url(/fonts/inter-v20-latin-regular.woff2);
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: urbanist;
+  src: url(/fonts/orbitron-v35-latin-700.woff2);
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: urbanist-b;
+  src: url(/fonts/orbitron-v35-latin-900.woff2);
+  font-display: swap;
+  font-weight: 900;
+  font-style: normal;
+}
+/* custom variable */
+:root {
+  --main-BG: hsl(0, 0%, 3%);
+  --surface-BG: hsl(0, 0%, 7%);
+  --text-pry: hsl(225, 21%, 93%);
+  --text-sec: hsl(224, 13%, 60%);
+
+  --light-BG: hsl(223, 47%, 97%);
+  --light-surface: hsl(0, 0%, 100%);
+  --light-text-pry: hsl(226, 20%, 13%);
+  --light-text-sec: hsl(224, 11%, 40%);
+  --accent: hsl(194, 100%, 43%);
+  --accent-dark: hsl(194, 100%, 11%);
+}
+
+/* reset */
+html {
+  font-size: 62.5%;
+}
+/* custom period */
+.coloured-period {
+  color: var(--accent);
+}
+/* headings */
+.headings {
+  text-align: center;
+  font-family: "urbanist-b", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+.sub-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.project-heading {
+  /* padding: 1rem; */
+  font-family: "urbanist-b", sans-serif;
+  /* color: var(--accent); */
+  font-size: 1.9rem;
+  font-weight: bold;
+  margin-block-start: 2rem ;
+  /* margin-block:rem; */
+}
+.coloured-heading{
+  color: var(--accent);
+}
+/* carousel */
+.wells-carousel__wrapper {
+  /* max-width: 50rem; */
+  display: flex;
+  overflow-x: auto;
+  border-top: solid var(--accent) 0.3rem;
+  border-bottom: solid var(--accent) 0.3rem;
+}
+.wells-carousel__wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes roll {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+.wells-carousel__slider {
+  padding-block: 1rem;
+  padding-inline-end: 3rem;
+  animation: roll 20s infinite linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.wells-carousel__wrapper:hover .wells-carousel__slider {
+  animation-play-state: paused;
+}
+
+/* services */
+.services {
+  max-width: 30rem;
+  border: 0.3rem solid var(--accent-dark);
+  padding-inline: 2.5rem;
+  padding-block: 4rem;
+  font-size: 1.6rem;
+  border-radius: 1.5rem;
+  background: var(--surface-BG);
+  gap: 2rem;
+  margin-block-end: 2rem;
+}
+.services:hover {
+  border: 0.3rem solid var(--accent);
+  transition: 0.4s ease;
+}
+.underlined {
+  width: 10rem;
+  border: 0.2rem solid var(--accent);
+  margin-block: 0.8rem;
+  border-radius: 5rem;
+}
+/* projects */
+.projects {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  padding: 2rem;
+  padding-block-start: 2.5rem;
+  padding-block-end: 3.5rem;
+  max-width: 32rem;
+  border: 0.3rem solid var(--accent-dark);
+  border-radius: 2rem;
+  background: var(--surface-BG);
+  margin-block-end: 2rem;
+}
+.projects:hover {
+  border: 0.3rem solid var(--accent);
+  transition: 0.4s ease;
+}
+.project__display {
+  height: 20rem;
+  width: 100%;
+  /* border: 1px solid; */
+}
+.project__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+/* buttons */
+.btn {
+  padding-block: 1rem;
+  padding-inline: 8rem;
+  border: 0.3rem solid var(--accent-dark);
+  border-radius: 1rem;
+  font-family: "Dm-sans", sans-serif;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+}
+.btn:hover {
+  border: 0.3rem solid var(--accent);
+  background: var(--accent);
+  color: var(--main-BG);
+  transition: 0.3s ease;
+}
+/* .github {
+  background: var(--text-sec);
+} */
+.buttons__wrapper {
+  margin-block-start: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.skills__btn {
+  max-width: fit-content;
+  padding-block: 1.5rem;
+  padding-inline: 2rem;
+  border: 0.3rem solid var(--accent-dark);
+  border-radius: 1rem;
+  font-family: "urbanist", sans-serif;
+  font-size: 1.3rem;
+  display: flex;
+  gap: 1rem;
+}
+/* contact */
+.contact-input {
+  width: 30rem;
+  background: var(--main-BG);
+  border: solid 0.2rem var(--accent-dark);
+  padding: 1rem;
+  border-radius: 2rem;
+  background: var(--surface-BG);
+}
+.contact-input:hover {
+  border: solid 0.2rem var(--accent);
+  transition: 0.4s ease;
+}
+.mini-heading {
+  margin-block: 1rem;
+}
+/* socials */
+.socials {
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--text-sec);
+  display: flex;
+  gap: 0.6rem;
+  border: 0.3rem solid;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+.socials:hover {
+  color: var(--accent);
+}
+/* icons */
+.fa-solid {
+  width: 20rem;
+  background: white;
+  color: wheat;
+}
+
+/* icons */
+.icons {
+  width: 2rem;
+}
+
+/* tab media */
+@media (min-width: 48rem) {
+  .headings {
+    font-size: 3.2rem;
+  }
+  .btn {
+    padding-inline: 3rem;
+  }
+  .buttons__wrapper {
+    flex-direction: row;
+  }
+  .services {
+    margin-block-end: 0;
+  }
+  .projects {
+    margin-block-end: 0;
+  }
+}
+/* desktop media */
+@media (min-width: 64rem) {
+  .wells-carousel__wrapper {
+    max-width: fit-content;
+    display: flex;
+    overflow-x: auto;
+    border-top: solid var(--accent) 0.3rem;
+    border-bottom: solid var(--accent) 0.3rem;
+  }
+  /* .wells__intro {
+    display: flex;
+    flex-direction: row;
+  } */
+  /* .project-heading {
+  font-size: 2rem;
+} */
+
+  /* .services {
+  } */
+  .btn {
+    padding-inline: 9rem;
+  }
+  .skills__btn {
+    font-size: 2rem;
+  }
+
+  .buttons__wrapper {
+    flex-direction: column;
+  }
+  
+  .icons {
+    width: 3rem;
+  }
+  .socials {
+    font-size: 2rem;
+  }
+  .contact-input {
+    width: 60rem;
+  }
+}
