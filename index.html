@@ -331,30 +331,41 @@
               <img src="" class="icons" alt="" /> <a href="">Frontend Mentor</a>
             </div> -->
           </div>
-          <form action="" class="p-[1rem] md:justify-center md:gap-[5rem]">
+          <form
+            action="https://api.web3forms.com/submit"
+            method="post"
+            class="p-[1rem] md:justify-center md:gap-[5rem]"
+          >
             <div class="form__wrapper justify-self-center">
               <h3 class="mini-heading">Enter Name</h3>
               <input
+                type="hidden"
+                name="access_key"
+                value="4669c59d-e37e-4f69-a99d-79262a529d84"
+              />
+              <input
                 type="text"
+                name="name"
                 placeholder="Eg : jane Doe"
                 class="contact-input"
               />
               <h3 class="mini-heading">Enter Email</h3>
               <input
                 type="email"
+                name="email"
                 placeholder="Eg : janeDoe@gmail.com"
                 class="contact-input"
               />
               <h3 class="mini-heading">Enter message</h3>
               <textarea
                 class="contact-input resize-none"
-                name=""
+                name="message"
                 id=""
                 placeholder="Eg : Hi lets work!"
                 rows="5"
               ></textarea>
               <input
-                type="button"
+                type="submit"
                 value="Send Message"
                 class="mt-[2rem] py-[1rem] px-[1.5rem] border-[0.3rem] border-[--accent-dark] rounded-[1rem] hover:bg-[--accent] transition-colors bg-[--accent-dark] hover:text-[--main-BG] flex justify-self-center"
               />
