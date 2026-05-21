@@ -75,9 +75,6 @@ html {
 .coloured-heading {
   color: var(--accent);
 }
-.nav-btns :hover {
-  color: var(--accent);
-}
 /* carousel */
 .wells-carousel__wrapper {
   /* max-width: 50rem; */
@@ -165,6 +162,12 @@ html {
   border-radius: 1rem;
 }
 /* buttons */
+.nav-btns > li :hover {
+  transition: .2s ease;
+  color: var(--accent);
+  border-bottom: .2rem solid var(--accent);
+  
+}
 .btn {
   padding-block: 1rem;
   padding-inline: 8rem;
@@ -261,6 +264,10 @@ html {
   .projects {
     margin-block-end: 0;
   }
+}
+/* links */
+.nav-links{
+  padding-inline: .5rem;
 }
 /* desktop media */
 @media (min-width: 64rem) {
