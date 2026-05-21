@@ -18,16 +18,16 @@
       <header class="">
         <nav>
           <ul
-            class="flex gap-x-[1rem] justify-center text-[1.8rem] text-[--text-sec]"
+            class="nav-btns flex gap-x-[1rem] justify-center text-[1.8rem] text-[--text-sec]"
           >
-            <li><a href="">Home</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
       </header>
-      <section class="wells-portfolio__hero">
+      <section class="wells-portfolio__hero" id="home">
         <div
           class="wells__intro flex flex-col my-[4rem] md:flex-row md:gap-[5rem] md:justify-center place-items-center"
         >
@@ -131,7 +131,7 @@
           </div> -->
         </div>
       </section>
-      <section class="wells-project__container mb-[9rem]">
+      <section class="wells-project__container mb-[9rem]" id="projects">
         <h1 class="headings">Projects<span class="coloured-period">.</span></h1>
         <div
           class="project__wrapper md:grid md:grid-cols-2 justify-self-center gap-[2rem] md:gap-[4rem] md:mt-[4rem] lg:flex lg:gap-[2.5rem] lg:flex-wrap lg:justify-center"
@@ -241,7 +241,7 @@
           </div>
         </div>
       </section>
-      <section class="wells-about__container grid justify-items-center">
+      <section class="wells-about__container grid justify-items-center" id="about">
         <h1 class="headings">About me<span class="coloured-period">.</span></h1>
         <div
           class="wells-about sm:flex sm:flex-col md:flex-row md:gap-[5rem] justify-center lg:max-w-[80rem] max-w-[65rem] p-[2rem] lg:text-[2rem]"
@@ -296,7 +296,7 @@
           </div>
         </div>
       </section>
-      <section class="wells-contact__container mt-[5rem] py-[3rem">
+      <section class="wells-contact__container mt-[5rem] py-[3rem" id="contact">
         <h1 class="headings">Contact<span class="coloured-period">.</span></h1>
         <p class="text-center max-w-[50rem] mb-[5rem] mx-auto">
           I'm currently available for full-time, freelance, contract projects

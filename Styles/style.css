@@ -45,6 +45,7 @@
 /* reset */
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 /* custom period */
 .coloured-period {
@@ -72,6 +73,9 @@ html {
   /* margin-block:rem; */
 }
 .coloured-heading {
+  color: var(--accent);
+}
+.nav-btns :hover {
   color: var(--accent);
 }
 /* carousel */
